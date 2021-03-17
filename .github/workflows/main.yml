@@ -6,8 +6,8 @@ on:
   push: # push触发
     branches: [ main ]
   workflow_dispatch: # 手动触发
-  schedule: # 计划任务触发,11减8等于3才是本地时间
-    - cron: '0 11/8 * * *' # cron表达式，Actions时区是UTC时间，所以要往前推8个小时(4-23)
+  schedule: # 计划任务触发,上午6点，晚上8点。
+    - cron: '0 22/12 * * *' # cron表达式，要往前推8个小时(4-23).UTC的16点，16+8=24，也就是北京时间的0点
     
 
 jobs:
